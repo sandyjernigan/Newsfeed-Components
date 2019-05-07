@@ -18,7 +18,14 @@ class Article {
 
   expandArticle() {
     // Using our reference to the domElement, toggle a class to expand or hide the article.
-    console.log('Test');
+    this.domElement.classList.toggle('article-open');
+
+    // Toggle Text on the Button between Expand and Close
+    if (this.expandButton.textContent === "expand") {
+      this.expandButton.textContent = "close";
+    } else {
+      this.expandButton.textContent = "expand";
+    }
   }
 }
 
