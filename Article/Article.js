@@ -18,6 +18,9 @@ class Article {
 
   expandArticle() {
     // Using our reference to the domElement, toggle a class to expand or hide the article.
+    this.domElement.style.transition = "background 1.5s ease-in 0s";
+    this.domElement.style.background = "#81C784";
+
     this.domElement.classList.toggle('article-open');
 
     // Toggle Text on the Button between Expand and Close
@@ -25,6 +28,8 @@ class Article {
       this.expandButton.textContent = "close";
     } else {
       this.expandButton.textContent = "expand";
+      this.domElement.style.transition = "background 1.5s ease-out 0s";
+      this.domElement.style.background = "white";
     }
   }
 }
