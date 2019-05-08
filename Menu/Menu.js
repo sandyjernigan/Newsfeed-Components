@@ -14,11 +14,5 @@ const menuButton = document.querySelector('.menu-button');
 // menuButton.addEventListener('click', () => toggleMenu());
 
 $(".menu-button").click(function(){
-  $(".menu").slideDown();
-  $(".menu-button").addClass("menuBtnOpen");
-  $(".menu-button").removeClass("menu-button");
-});
-
-$(".menuBtnOpen").click(function(){
-  $(".menu").slideUp();
+  $(".menu").slideToggle("slow");
 });
