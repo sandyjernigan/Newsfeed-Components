@@ -1,4 +1,4 @@
-// Function Here
+
 const toggleMenu = () => {
   // Toggle the "menu--open" class on your menu refence. 
   menu.classList.toggle('menu--open');
@@ -11,4 +11,14 @@ const menu = document.querySelector('.menu');
 const menuButton = document.querySelector('.menu-button');
 
 // Using your menuButton reference, add a click handler that calls toggleMenu
-menuButton.addEventListener('click', () => toggleMenu());
+// menuButton.addEventListener('click', () => toggleMenu());
+
+$(".menu-button").click(function(){
+  $(".menu").slideDown();
+  $(".menu-button").addClass("menuBtnOpen");
+  $(".menu-button").removeClass("menu-button");
+});
+
+$(".menuBtnOpen").click(function(){
+  $(".menu").slideUp();
+});

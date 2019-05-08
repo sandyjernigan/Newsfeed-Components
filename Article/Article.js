@@ -28,7 +28,6 @@ class Article {
       this.expandButton.textContent = "close";
     } else {
       this.expandButton.textContent = "expand";
-      this.domElement.style.transition = "background 1.5s ease-out 0s";
       this.domElement.style.background = "white";
     }
   }
